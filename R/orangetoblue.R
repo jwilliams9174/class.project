@@ -8,7 +8,7 @@
 #' @export
 
 
-blue_to_orange <-function(color_B){
+blue_to_orange <- function(color_B){
   color_O <- (color_B - 100) * 200/50
   return(color_O)
 }
