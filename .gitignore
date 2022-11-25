@@ -3,3 +3,6 @@
 .Rdata
 .httr-oauth
 .DS_Store
+class.project.Rcheck/
+class.project*.tar.gz
+class.project*.tgz
