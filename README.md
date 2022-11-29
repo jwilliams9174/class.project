@@ -12,6 +12,8 @@ editor_options:
 
 This R Package uses the crabs data file.
 
+download.file("https://rawgithubusercontent.com/johnwilliams/class.project/master/data/crabs.csv", destfile = "/cloud/project/data/crabs.csv")
+
 ## What does it do?
 
    -   My package compares the data between orange and blue crabs.
