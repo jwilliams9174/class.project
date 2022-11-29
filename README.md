@@ -12,7 +12,7 @@ editor_options:
 
 This R Package uses the crabs data file.
 
-download.file("https://rawgithubusercontent.com/johnwilliams/class.project/master/data/crabs.csv", destfile = "/cloud/project/data/crabs.csv")
+download.file("https://rawgithubusercontent.com/jwilliams9174/class.project/master/data/crabs.csv", destfile = "/cloud/project/data/crabs.csv")
 
 ## What does it do?
 
