@@ -28,7 +28,7 @@ download.file("https://rawgithubusercontent.com/jwilliams9174/class.project/mast
 ## Installation
 
 - install.packages("devtools")
-- devtools::install_github("jwilliams9174/class.project"")
+- devtools::install_github("jwilliams9174/class.project")
 
 Are there any R packages yours depends on?
 
