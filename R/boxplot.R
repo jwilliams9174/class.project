@@ -7,4 +7,6 @@
 #' 
 #' @export
 #' 
-#' ggplot(data = crabs, mapping = aes(x = color, y = body_depth, color = sex)) + geomplot()
+#' sex_comparison <-crabs %>% 
+#' group_by(sex, color)
+#' ggplot(data = sex_comparison, mapping = aes(x = color, y = body_depth, color = sex))+ geom_boxplot()
