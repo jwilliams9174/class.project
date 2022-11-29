@@ -1,4 +1,4 @@
-#' Compare two colors together and return the product
+#' Compares values of carapace_length in blue crabs to orange crabs
 #' 
 #' @param x Color_O
 #' @param y Color_B

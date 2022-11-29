@@ -3,55 +3,59 @@ title: "README.Rmd"
 author: "John Williams"
 date: "2022-11-08"
 output: html_document
+editor_options: 
+  markdown: 
+    wrap: 72
 ---
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
-```
-
 ## Introduction
-Enter a short description of your R Package.
 
-+ What does it do? My package compares the number of orange crabs to blue crabs.
-+ What type of data is it meant to work with? The crabs.csv file
-+ What are the major outputs of your R package? blue_to_orange <-function(color_B){
+This R Package uses the crabs data file.
+
+## What does it do?
+
+   -   My package compares the data between orange and blue crabs.
+
+## What type of data is it meant to work with? 
+
+   - install.packages("readr")
+   - library(readr)
+   - crabs <- read_csv("data/crabs.csv")
+   - View(crabs)
+
+## Installation
+
+Are there any R packages yours depends on?
+
+- install.packages("tidyverse")
+- library(tidyverse)
+- library(ggplot2)
+
+## Function One
+Compares values of carapace_length in blue crabs to orange crabs
+
+- blue_to_orange <- function(color_B){
   color_O <- (color_B - 100) * 200/50
   return(color_O)
 }
 
-## Installation
+## Function Two
+Checks to make sure all NAs are removed
 
-+ Are there any R packages yours depends on?
+- data_cleaning <- function(crabs){
+  data_raw <- read_csv("data/crabs.csv")
+  data_clean <- data_raw %>% 
+    drop_na()
+  return(data_clean)
+}
 
-```{r}
-install.packages("tidyverse")
-```
+## Function Three
 
-## Usage Examples
+Shows the points on a graph between males and females.
 
-In this section, you want to provide some context for why someone might want to whatever it is that your R package does.
+- crabs_plot <- function(crabs.csv){
+        data <- read_csv("data/crabs.csv")
+        plot <- ggplot(data = crabs, aes(x = carapace_length, y = body_depth, color = sex)) + geom_point()
+        print(plot)
+}
 
-Multiplication is a fundamental mathematical operation and if a user wanted to do that in this packages, they would do:
-
-```{r}
-mult(5, 10)
-```
-## R Markdown
-
-This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
-
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
-
-```{r cars}
-summary(cars)
-```
-
-## Including Plots
-
-You can also embed plots, for example:
-
-```{r pressure, echo=FALSE}
-plot(pressure)
-```
-
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
