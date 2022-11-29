@@ -12,8 +12,6 @@ editor_options:
 
 This R Package uses the crabs data file.
 
-download.file("https://rawgithubusercontent.com/jwilliams9174/class.project/master/data/crabs.csv", destfile = "/cloud/project/data/crabs.csv")
-
 ## What does it do?
 
    -   My package compares the data between orange and blue crabs.
@@ -29,6 +27,8 @@ download.file("https://rawgithubusercontent.com/jwilliams9174/class.project/mast
 
 - install.packages("devtools")
 - devtools::install_github("jwilliams9174/class.project")
+
+download.file("https://rawgithubusercontent.com/jwilliams9174/class.project/master/data/crabs.csv", destfile = "/cloud/project/data/crabs.csv")
 
 Are there any R packages yours depends on?
 
